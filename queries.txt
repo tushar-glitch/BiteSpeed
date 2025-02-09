@@ -1,0 +1,2 @@
+--> Create Table - 
+-- CREATE TABLE Contact (id SERIAL PRIMARY KEY, phoneNumber VARCHAR(32), email VARCHAR(128), linkedId INT NULL REFERENCES Contact(id) ON DELETE SET NULL, linkPrecedence VARCHAR(16) CHECK (linkPrecedence IN ('primary', 'secondary')), createdAt timestamp default current_timestamp, updatedAt timestamp default current_timestamp, deletedAt timestamp default current_timestamp)
